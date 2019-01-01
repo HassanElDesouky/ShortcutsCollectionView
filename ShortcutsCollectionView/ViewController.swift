@@ -27,7 +27,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.title = "Lists"
 
         if #available(iOS 11.0, *) {
-                self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationController?.navigationBar.prefersLargeTitles = true
         }
 
         navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewList)), animated: true)
