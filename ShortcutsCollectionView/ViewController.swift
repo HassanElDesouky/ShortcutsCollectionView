@@ -25,7 +25,11 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     fileprivate func setupNavigationBarController() {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.title = "Lists"
-        navigationController?.navigationBar.prefersLargeTitles = true
+
+        if #available(iOS 11.0, *) {
+                self.navigationController?.navigationBar.prefersLargeTitles = true
+        }
+
         navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewList)), animated: true)
     }
     fileprivate func setupCollectionView() {
